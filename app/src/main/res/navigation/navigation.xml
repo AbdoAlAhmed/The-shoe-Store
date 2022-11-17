@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.abdo.theshoestore.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.abdo.theshoestore.WelcomeFragment"
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.abdo.theshoestore.InstructionsFragment"
+        android:label="InstructionsFragment" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_shoeListenFragment"
+            app:destination="@id/shoeListenFragment"
+            app:popUpTo="@id/instructionsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetialsFragment"
+        android:name="com.abdo.theshoestore.ShoeDetialsFragment"
+        android:label="ShoeDetialsFragment" >
+        <action
+            android:id="@+id/action_shoeDetialsFragment_to_shoeListenFragment"
+            app:destination="@id/shoeListenFragment" />
+
+
+
+
+    </fragment>
+    <action
+        android:id="@+id/action_shoeListFragment_to_LoginFragment"
+        app:destination="@+id/loginFragment"
+        app:popUpTo="@layout/fragment_shoe_detials"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/shoeListenFragment"
+        android:name="com.abdo.theshoestore.ShoeListFragment"
+        android:label="ShoeListenFragment" >
+        <action
+            android:id="@+id/action_shoeListenFragment_to_shoeDetialsFragment"
+            app:destination="@id/shoeDetialsFragment" />
+    </fragment>
+</navigation>

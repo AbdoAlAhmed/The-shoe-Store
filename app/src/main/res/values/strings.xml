@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TheShoeStore</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_email">Your Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="singin">SingIn</string>
+    <string name="welcome_message">\t \t Welcome \n The shoe Store</string>
+    <string name="the_best_shoe_store">The best shoe store</string>
+    <string name="clickme">ClickMe!</string>
+    <string name="create">create</string>
+    <string name="to_add_a_new_shoe_click_on_button">to add a new shoe click on \n FAB button\n on the next page</string>
+    <string name="click_the_button_below_to_go_to_next_page">click the button below to go to next page</string>
+    <string name="clickme2">clickme2!</string>
+    <string name="add_shoe">Add shoe</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company">Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="description">Description</string>
+    <string name="save">save</string>
+    <string name="cancel">cancel</string>
+    <string name="nike">Nike</string>
+    <string name="fun_and_cool">fun and cool</string>
+    <string name="logout">logout</string>
+</resources>
