@@ -8,8 +8,8 @@ import androidx.lifecycle.ViewModel
 class ShoeViewModel : ViewModel() {
 
 
-    private val _shoeList = MutableLiveData<MutableList<Shoe>>()
-    val shoeList: LiveData<MutableList<Shoe>>
+    private val _shoeList = MutableLiveData<ArrayList<Shoe>>()
+    val shoeList: LiveData<ArrayList<Shoe>>
         get() = _shoeList
 
     private val _addSuccessEvent = MutableLiveData<Boolean>()
@@ -20,11 +20,9 @@ class ShoeViewModel : ViewModel() {
     init {
         _addSuccessEvent.value = false
 
-        _shoeList.value = mutableListOf(
-            Shoe("Nike","4.5","cool and fun","fun"),
-            Shoe("Active","4.5","cool and fun","fun")
+        _shoeList.value = arrayListOf(
+            Shoe("Nike","45","cool and fun ", "nike")
         )
-
     }
 
     // Method add new shoe
@@ -33,7 +31,8 @@ class ShoeViewModel : ViewModel() {
         val shoeSize = shoe.shoeSize ?: " "
         val company = shoe.company ?: " "
         val description = shoe.description ?: " "
-        _shoeList.value?.add(Shoe(shoeName, shoeSize, company, description))
+        _shoeList.value?.add(Shoe(shoeName,shoeSize,company,description))
+
         Log.i("TAG",_shoeList.value.toString())
         // change event to true
         _addSuccessEvent.value = true
@@ -45,3 +44,5 @@ class ShoeViewModel : ViewModel() {
     }
 
 }
+
+

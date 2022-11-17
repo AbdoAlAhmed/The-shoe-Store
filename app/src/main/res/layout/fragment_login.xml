@@ -12,7 +12,8 @@
 
     <!-- login Fragment
      EditText for email and password
-     button for login
+     button for login and create
+     this two button navigate to welcome fragment
      -->
     <EditText
         android:id="@+id/et_email"

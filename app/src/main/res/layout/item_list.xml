@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
     <data>
+<!--        data binding-->
         <variable
             name="shoe"
             type="com.abdo.theshoestore.Shoe" />
@@ -12,6 +13,8 @@
     android:orientation="vertical"
     android:layout_margin="@dimen/_10dpmargin"
     >
+<!--    text to display ShoeName and description
+    using data binding-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

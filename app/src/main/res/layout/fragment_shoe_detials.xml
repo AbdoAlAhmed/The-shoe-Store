@@ -3,6 +3,7 @@
 
     <data>
 
+<!--        binding data -->
         <variable
             name="viewModel"
             type="com.abdo.theshoestore.ShoeViewModel" />
@@ -18,6 +19,7 @@
         android:orientation="vertical"
         tools:context=".ShoeDetialsFragment">
 
+<!--        display text -->
         <TextView
             style="@style/text_style"
             android:layout_width="match_parent"
@@ -25,6 +27,14 @@
             android:gravity="center"
             android:text="@string/add_shoe" />
 
+<!--
+
+    edit text for shoeName , company ,shoeSize
+    description
+
+    using two way binding
+
+-->
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,6 +69,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
+<!--
+    two button to navigate back to listFragment
+    save => for back to listFragment and save data
+    cancel => for back
+-->
 
             <Button
                 android:id="@+id/btn_save"

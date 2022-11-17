@@ -2,8 +2,10 @@ package com.abdo.theshoestore
 
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -14,7 +16,7 @@ import com.abdo.theshoestore.databinding.ItemListBinding
 
 class ShoeListFragment : Fragment() {
 
-    private lateinit var viewModel: ShoeViewModel
+    private val viewModel: ShoeViewModel by activityViewModels()
     private lateinit var binding:FragmentShoeListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +32,7 @@ class ShoeListFragment : Fragment() {
          binding = DataBindingUtil.inflate<FragmentShoeListBinding>(
             inflater,R.layout.fragment_shoe_list,container,false
         )
-        viewModel = ViewModelProvider(this)[ShoeViewModel::class.java]
+//        viewModel = ViewModelProvider(this)[ShoeViewModel::class.java]
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
@@ -39,6 +41,7 @@ class ShoeListFragment : Fragment() {
         }
         // observe shoeList to add new shoe to linearContainer
         viewModel.shoeList.observe(viewLifecycleOwner, Observer {
+            Toast.makeText(binding.root.context, it.toString(), Toast.LENGTH_SHORT).show()
             for (shoe in it){
              binding.linearLayoutContainer.addView(addShoeToView(shoe))
             }

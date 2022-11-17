@@ -9,6 +9,8 @@
     tools:context=".MainActivity">
 
 
+<!--    this fragment for host -->
+
 
     <fragment
         android:id="@+id/myNavHost"

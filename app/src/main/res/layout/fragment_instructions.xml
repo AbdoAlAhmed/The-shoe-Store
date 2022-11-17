@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         tools:context=".InstructionsFragment">
 
-
+<!--        display text in fragment using a custom style -->
         <TextView
             android:id="@+id/textView3"
             android:layout_width="0dp"
@@ -22,6 +22,7 @@
             app:layout_constraintTop_toTopOf="parent"
             style="@style/text_style" />
 
+<!--        display text in fragment -->
         <TextView
             android:id="@+id/textView4"
             android:layout_width="0dp"
@@ -36,6 +37,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
+<!--        button to navigate to instruction-->
         <Button
             android:id="@+id/btn_click2"
             android:text="@string/clickme2"

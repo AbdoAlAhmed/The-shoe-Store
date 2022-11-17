@@ -16,7 +16,7 @@ import com.abdo.theshoestore.databinding.FragmentShoeDetialsBinding
 
 class ShoeDetialsFragment : Fragment() {
 
-    private lateinit var viewModel : ShoeViewModel
+    private val viewModel : ShoeViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,7 +27,7 @@ class ShoeDetialsFragment : Fragment() {
             inflater,R.layout.fragment_shoe_detials,container,false
         )
         // initialize viewModel
-        viewModel = ViewModelProvider(this)[ShoeViewModel::class.java]
+//        viewModel = ViewModelProvider(this)[ShoeViewModel::class.java]
         binding.viewModel = viewModel
         binding.shoe = Shoe("","","","")
 
